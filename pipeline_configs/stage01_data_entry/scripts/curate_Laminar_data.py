@@ -79,11 +79,8 @@ if __name__ == '__main__':
                      help="Trial number (optional), if None select all")
     args, unknown = CLI.parse_known_args()
 
-    #added to test the simulation data 
-    from scipy.io import loadmat
-    data_file = loadmat(args.data)
-    data = np.array(data_file['LFP']).T
-    ##
+    data_file = h5py.File(args.data, 'r')
+    data = np.array(data_file['LFP'])
     del data_file
     dim_t, dim_channel = data.shape
         

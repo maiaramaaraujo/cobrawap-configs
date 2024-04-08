@@ -4,7 +4,7 @@
 STAGE_NAME: 'stage03_trigger_detection'
 
 # The profile name is the key for this parameter configuration. Results are stored in output_path/<PROFILE>/ (output_path is defined in settings.py)
-PROFILE: 'Laminar_test'
+PROFILE: 'Laminar'
 
 # Name of the stage output file
 STAGE_OUTPUT: 'trigger_times.nix'
@@ -26,7 +26,7 @@ PLOT_FORMAT: 'png'
 # DETECTION BLOCK
 #################˜
 # Available Blocks: 'threshold', 'hilbert_phase', 'minima'
-DETECTION_BLOCK: 'threshold'
+DETECTION_BLOCK: 'hilbert_phase'
 
 # TRIGGER FILTER
 #################
@@ -79,8 +79,8 @@ MINIMA_PERSISTENCE: 0.16
 # minimum duration of UP and DOWN states (in s)
 # If there are no DOWN transitions, UP transitions are removed closer than
 # the sum of UP and DOWN durations.
-MIN_UP_DURATION: 0.01 #0.01 - tested #0.005
-MIN_DOWN_DURATION: 0.01 #0.01 - tested #0.005
+MIN_UP_DURATION: 0.95
+MIN_DOWN_DURATION: 0.95
 # If true, short down states are removed first, merging the neighbouring up states.
 # Only then the remaining short up states are removed.
 # Applies only when down transitions are detected.

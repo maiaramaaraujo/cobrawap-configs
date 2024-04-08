@@ -4,7 +4,7 @@
 STAGE_NAME: 'stage04_wave_detection'
 
 # The profile name is the key for this parameter configuration. Results are stored in output_path/<PROFILE>/ (output_path is defined in settings.py)
-PROFILE: 'Laminar_test'
+PROFILE: 'Laminar'
 
 # Name of the output file
 STAGE_OUTPUT: "waves.nix"
@@ -32,17 +32,17 @@ DETECTION_BLOCK: 'trigger_clustering'
 # ADDITIONAL PROPERTIES
 #######################
 # Available Blocks: 'optical_flow', 'critical_points'
-ADDITIONAL_PROPERTIES: ['optical_flow','wave_mode_clustering'] #'optical_flow', critical_points']
+ADDITIONAL_PROPERTIES: ['optical_flow','wave_mode_clustering'] #, critical_points']
 
 # Wavefront Clustering
 ######################
 # Using sklearn.cluster.DBSCAN
 METRIC: 'euclidean'
 # eps, maximum distance between points to be neighbours
-NEIGHBOUR_DISTANCE: 10
+NEIGHBOUR_DISTANCE: 8
 MIN_SAMPLES_PER_WAVE: 8
 # Factor from time dimension to space dimension in sampling_rate*spatial_scale
-TIME_SPACE_RATIO: 1.2 # i.e. distance between 2 frames corresponds to X pixel 
+TIME_SPACE_RATIO: 0.8 # i.e. distance between 2 frames corresponds to X pixel 
 
 # Optical Flow (Horn-Schunck algorithm)
 ##############
@@ -75,7 +75,7 @@ WAVE_OUTLIER_QUANTILE: 1 #1 0.95
 # number of pca dims to project the trigger patterns onto before clustering
 PCA_DIMS: 10
 # number of clusters for the kmeans algorithm
-NUM_KMEANS_CLUSTER: 3
+NUM_KMEANS_CLUSTER: 8
 # grid spacing for the interpolation [0,1]
 INTERPOLATION_STEP_SIZE: 0.25
 # smoothing factor (0: no smoothing)

@@ -4,7 +4,7 @@
 STAGE_NAME: stage01_data_entry
 
 # The profile name is the key for this parameter configuration. Results are stored in output_path/<PROFILE>/ (output_path is defined in settings.py)
-PROFILE: Laminar_test
+PROFILE: 'Laminar'
 
 # Name of stage output file.
 STAGE_OUTPUT: data.nix
@@ -21,7 +21,7 @@ USE_LINK_AS_STAGE_OUTPUT: true
 # To set as key-value pairs
 # Name_of_dataset: /path/to/data/files/
 DATA_SETS:
-    Mo18412002: '/Users/maiaraaraujo/Downloads/template_laminar_waves/tw_synthetic.mat'   # replace!
+    Mo18412002: '/Users/maiaraaraujo/Downloads/template_laminar_waves/Mo18412002_LFP.mat'   # replace!
 
 CURATION_SCRIPT: curate_Laminar_data.py
 

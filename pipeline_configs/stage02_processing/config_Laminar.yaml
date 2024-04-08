@@ -4,7 +4,7 @@
 STAGE_NAME: 'stage02_processing'
 
 # The profile name is the key for this parameter configuration. Results are stored in output_path/<PROFILE>/ (output_path is defined in settings.py)
-PROFILE: 'Laminar_test'
+PROFILE: 'Laminar'
 
 # Name of the output file
 STAGE_OUTPUT: "processed_data.nix"
